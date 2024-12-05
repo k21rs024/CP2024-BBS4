@@ -57,7 +57,7 @@ function updateCharacterCount(inputId, counterId, maxLength) {
     
     input.on('input', () => {
         const length = input.val().length;
-        counter.text(`${length}/${maxLength}`);
+        counter.text("残り"+ maxLength-length +"文字");
     
         if (length > maxLength) {
             counter.addClass('error');
@@ -475,7 +475,7 @@ $(function() {
      });
 
     // 文字数カウンターの初期化
-    updateCharacterCount('contentInput', 'contentCount', 1000);
+    updateCharacterCount('contentInput','contentCount',1000);
 
     // 投稿処理
     $('#postButton').on('click', function() {
