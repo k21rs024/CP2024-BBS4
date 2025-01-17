@@ -514,9 +514,10 @@ window.addEventListener('unload', function() {
         postsListener = null;
     }
 });
+
     </script>
 </head>
-<body>
+<body id=BG>
     <div class="container">
         <h1>掲示板アプリ</h1>
         
@@ -547,6 +548,18 @@ window.addEventListener('unload', function() {
             <span>ログイン中：<span id="userEmail"></span></span>
             <button id="logoutButton" class="btn-secondary">ログアウト</button>
         </div>
+        
+        <div class="back-color">
+            <h3>背景の色を選んでください</h3>
+            <button class="btn-red" onclick="buttonClick('red')">赤</button>
+            <button class="btn-blue" onclick="buttonClick('blue')">青</button>
+            <button class="btn-yellow" onclick="buttonClick('yellow')">黄</button>
+            <button class="btn-green" onclick="buttonClick('green')">緑</button>
+            <button class="btn-purple" onclick="buttonClick('purple')">紫</button>
+            <button class="btn-pink" onclick="buttonClick('pink')">ピンク</button>
+            <button class="btn-white" onclick="buttonClick('white')">白</button>
+        </div>
+        
 
         <!-- 投稿フォーム（ログイン時表示） -->
         <div class="post-form logged-in">
@@ -617,5 +630,6 @@ window.addEventListener('unload', function() {
             </div>
         </div>
     </div>
+
 </body>
 </html>
